@@ -1,0 +1,34 @@
+<href https://www.youtube.com/watch?v=IEGPzmxyIpo/>
+
+<H1 Introduction to Docker and Containers />
+
+Old Applications: monolithic even load balanced.
+
+New Application:
+  1> Applications are constantly build
+  2> New version are been deployed often
+  3> Build from loose-coupled components
+  4> Deploy to multiple servers
+  
+  
+Container make your application portable:
+1> It looks the same everywhere
+2> 所有依赖自包含。
+Docker: One container run everywhere
+
+Docker launched at 2013:
+  
+  
+  Docker makes your applicaiton shareable via docker file: sample
+  
+    FROM ubuntu:14.04
+    RUN apt-get install -y redis-server
+    EXPOSE 6379   【打开端口】
+    ENTRYPOINT ["/usr/bin/redis-server"]
+    
+    
+    
+  容器包含了所有的环境运行依赖：二进制文件；Lib；File System； 但是还要依赖<bold 宿主机的网络和内核/>
+  
+  
+  No need to run entire OS, leave your host OS clean.
